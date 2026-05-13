@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Ornamen KangMulyadi</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:#f1f5f9;
+      color:#1e293b;
+    }
+
+    /* HEADER */
+    .header{
+      width:100%;
+      background:linear-gradient(135deg,#0f172a,#1e293b);
+      padding:20px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:100;
+      box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .logo{
+      color:white;
+      font-size:30px;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    .instagram-btn{
+      background:linear-gradient(45deg,#ff512f,#dd2476);
+      color:white;
+      text-decoration:none;
+      padding:12px 24px;
+      border-radius:12px;
+      font-weight:600;
+      transition:0.3s;
+      box-shadow:0 5px 12px rgba(221,36,118,0.3);
+    }
+
+    .instagram-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 8px 18px rgba(221,36,118,0.5);
+    }
+
+    /* HERO */
+    .hero{
+      width:100%;
+      height:350px;
+      background:
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1400');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:50px;
+      margin-bottom:15px;
+      font-weight:700;
+    }
+
+    .hero p{
+      font-size:18px;
+      max-width:700px;
+      opacity:0.9;
+    }
+
+    /* CONTAINER */
+    .container{
+      width:90%;
+      margin:auto;
+      padding:50px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:38px;
+      margin-bottom:10px;
+      color:#0f172a;
+    }
+
+    .section-title p{
+      color:#64748b;
+      font-size:16px;
+    }
+
+    /* CARD GRID */
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:35px;
+    }
+
+    /* CARD */
+    .card{
+      background:white;
+      border-radius:22px;
+      overflow:hidden;
+      transition:0.4s;
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+      position:relative;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .card img{
+      width:100%;
+      height:300px;
+      object-fit:cover;
+      transition:0.4s;
+    }
+
+    .card:hover img{
+      transform:scale(1.05);
+    }
+
+    .card-content{
+      padding:25px;
+    }
+
+    .product-name{
+      font-size:24px;
+      font-weight:600;
+      margin-bottom:10px;
+      color:#0f172a;
+    }
+
+    .product-desc{
+      font-size:14px;
+      color:#64748b;
+      line-height:1.6;
+      margin-bottom:18px;
+    }
+
+    .price{
+      font-size:28px;
+      color:#16a34a;
+      font-weight:700;
+      margin-bottom:20px;
+    }
+
+    /* BUTTON */
+    .buy-btn{
+      width:100%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+      padding:14px;
+      background:#25D366;
+      color:white;
+      text-decoration:none;
+      border-radius:14px;
+      font-size:16px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .buy-btn:hover{
+      background:#1ebe5d;
+      transform:scale(1.02);
+    }
+
+    /* BADGE */
+    .badge{
+      position:absolute;
+      top:15px;
+      left:15px;
+      background:#ef4444;
+      color:white;
+      padding:8px 14px;
+      border-radius:30px;
+      font-size:13px;
+      font-weight:600;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* FOOTER */
+    footer{
+      margin-top:70px;
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:25px;
+      font-size:15px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+
+      .header{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
+
+      .hero p{
+        font-size:15px;
+      }
+
+      .section-title h2{
+        font-size:30px;
+      }
+
+      .card img{
+        height:240px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="logo">
+      KangMulyadi
+    </div>
+
+    <a href="https://www.instagram.com/mulyadi_3850?igsh=MTFnOTcyYjB3NHg0Nw=="
+       target="_blank"
+       class="instagram-btn">
+
+       Chat Instagram
+    </a>
+
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <h1>Ornamen Premium & Elegan</h1>
+
+    <p>
+      Percantik rumah dan ruangan anda dengan koleksi ornamen eksklusif
+      berkualitas tinggi dari Toko KangMulyadi.
+    </p>
+
+  </section>
+
+  <!-- CONTENT -->
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Produk Terlaris</h2>
+      <p>Koleksi ornamen favorit pelanggan kami</p>
+    </div>
+
+    <div class="card-container">
+
+      <!-- CARD 1 -->
+      <div class="card">
+
+        <div class="badge">
+          Best Seller
+        </div>
+
+        <img src="2.jpeg" alt="Patung Angela">
+
+        <div class="card-content">
+
+          <div class="product-name">
+            Patung Angela
+          </div>
+
+          <div class="product-desc">
+            Ornamen patung elegan dengan detail premium cocok untuk dekorasi ruang tamu modern.
+          </div>
+
+          <div class="price">
+            Rp 2.000.000
+          </div>
+
+          <a href="https://wa.me/6285219625858?text=Saya%20ingin%20memesan%20Patung%20Angela"
+             target="_blank"
+             class="buy-btn">
+
+             Pesan Sekarang
+          </a>
+
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+
+        <div class="badge">
+          Terbaru
+        </div>
+
+        <img src="3.jpeg" alt="Mural Dinding">
+
+        <div class="card-content">
+
+          <div class="product-name">
+            Mural Dinding
+          </div>
+
+          <div class="product-desc">
+            Hiasan mural artistik dengan sentuhan estetik untuk mempercantik interior rumah.
+          </div>
+
+          <div class="price">
+            Rp 2.500.000
+          </div>
+
+          <a href="https://wa.me/6285219625858?text=Saya%20ingin%20memesan%20Mural%20Dinding"
+             target="_blank"
+             class="buy-btn">
+
+             Pesan Sekarang
+          </a>
+
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+
+        <div class="badge">
+          Favorit
+        </div>
+
+        <img src="4.jpeg" alt="Patung Romawi">
+
+        <div class="card-content">
+
+          <div class="product-name">
+            Patung Romawi
+          </div>
+
+          <div class="product-desc">
+            Kerajinan Seni Pahat handmade dengan nuansa klasik dan elegan.
+          </div>
+
+          <div class="price">
+            Rp 10.000.000
+          </div>
+
+          <a href="https://wa.me/6285219625858?text=Saya%20ingin%20memesan%20Patung%20Romawi"
+             target="_blank"
+             class="buy-btn">
+
+             Pesan Sekarang
+          </a>
+
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="card">
+
+        <div class="badge">
+          Promo
+        </div>
+
+        <img src="6.jpeg" alt="Patung Angale">
+
+        <div class="card-content">
+
+          <div class="product-name">
+            Patung angela
+          </div>
+
+          <div class="product-desc">
+            Ornamen patung elegan dengan detail premium cocok untuk dekorasi ruang tamu modern.
+          </div>
+
+          <div class="price">
+            Rp 2.500.000
+          </div>
+
+          <a href="https://wa.me/6285219625858?text=Saya%20ingin%20memesan%20Patung%20Angela"
+             target="_blank"
+             class="buy-btn">
+
+             Pesan Sekarang
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Toko Ornamen KangMulyadi • Semua Hak Dilindungi
+  </footer>
+
+</body>
+</html> 
